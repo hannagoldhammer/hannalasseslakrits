@@ -1,0 +1,40 @@
+@import "mixins.scss";
+#header {
+    z-index: 1;
+    background-color: #1c1c1c;
+    text-align: center;
+    background-image: url("#");
+    #headerTitle {
+        font-family: "Century Gothic";
+        font-size: 40px;
+        margin-left: 10px;
+        color: white;
+    }
+    #slogan {
+        color: rgb(216, 216, 129);
+        margin-bottom: 0%;
+    }
+}
+.navbar{
+    a{
+        color: rgb(216, 216, 129) !important;
+    }
+    .navbar-toggler{
+        border-color: white;
+    }
+    .iconBar{
+        color: white !important;
+    }
+    .navbar-nav{
+        @include mini-desktop{
+            margin: auto;
+            li{
+                margin-left: 70px;
+                margin-right: 70px;
+            }
+        }
+    }
+}
+#pagination{
+    padding: 25px;
+}

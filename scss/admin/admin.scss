@@ -1,0 +1,252 @@
+@mixin desktop {
+    @media (max-width: 1599px) { @content; }    
+}
+@mixin desktopLower {
+    @media (min-width: 1600px) { @content; }    
+}
+
+* {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+body {
+    text-transform: capitalize;
+    text-align: center;
+
+    h1 {
+        font-size: 2.5rem;
+        border-bottom: 2px solid black;
+        display: inline;
+        border-spacing: 2px;
+    }
+
+    .usersTable {
+        padding-top: 5px;
+    }
+
+    .adminsTable {
+        padding-top: 30px;
+    }
+
+    .textTransformInitial {
+        text-transform: initial;
+    }
+
+    table {
+        margin-top: 20px;
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+        white-space: nowrap;
+
+        a {
+            color: #000;
+        }
+        
+        input, textarea {
+            font-size: inherit;
+        }
+    
+        textarea {
+            padding-top: 47px;
+        }
+    
+        input::placeholder, textarea::placeholder {
+            color: #000;
+        }
+    
+        label {
+            font-weight: normal;
+        }
+
+        .fontAwesomeIcon {
+            text-align: center;
+        }
+
+        td {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    
+        #addProduct {
+            height: 100px;
+        }
+        
+        .inputAdd {
+            display: block;
+            width: 100%;
+            height: 60px;
+            border: 0;
+        }
+
+        .inputDescription {
+            width: 100%;
+            min-height: 60px;
+            border: 0;
+            resize: vertical;
+        }
+
+        .inputAdd:focus, .inputDescription:focus {
+            outline: none;
+        }
+    
+        .tdAdd {
+            margin: 0; padding: 0;
+        }
+          
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    
+        .productRow:hover {
+            background-color: #ffce54;
+        }
+    
+        .fa-caret-up {
+            color: #ffce54;
+            margin-left: 5px;
+        }
+        .fa-caret-down {
+            color: #ffce54;
+            margin-left: 2px;
+        }
+
+        .rowName {
+            width: 20%;
+        }
+
+        .rowNameTable {
+            padding-top: 0;
+            margin-top: 0;
+        }
+    
+        .rowPrice {
+            width: 7%;
+        }
+    
+        .rowDescription {
+            width: 32%;
+        }
+    
+        .rowCategoryRadio {
+            width: 12.5%;
+            text-align: center;
+            input[type=radio] {
+                display: grid;
+                width: 100%;
+                margin: 10px 0px 5px 0px;
+            }
+        }
+
+        .rowCategory {
+            width: 12.5%;
+        }
+
+        .rowColor {
+            width: 4.5%;
+        }
+
+        .rowCreatedBy {
+            width: 8%;
+        }
+
+        .rowImg, .rowChange, .rowDelete {
+            width: 5%;
+        }
+    
+        .rowImg2 {
+            width: 18.5%;
+        }
+
+        .rowUser {
+            padding-top: 21px;
+        }
+
+    }
+
+    form {
+        text-align: center;
+    }
+
+    .animate {
+        transition: all 0.1s;
+        -webkit-transition: all 0.1s;
+    }
+    .green {
+        background-color: #42ac6e;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 5px solid #76d49e;
+        text-shadow: 0px -2px #27ae60;
+    }
+    .grey {
+        background-color: #a3b3aa;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 5px solid #c4d4cb;
+        text-shadow: 0px -2px #acb8b1;
+    }
+    .yellow {
+        background-color: #b6b463;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 5px solid #cfd87a;
+        text-shadow: 0px -2px #b2be6b;
+    }
+    .action-button {
+        padding: 10px 40px;
+        margin: 20px 0px;
+        font-size: 18px;
+        color: #FFF;
+        text-decoration: none;
+    }
+    .action-button:active {
+        transform: translate(0px,5px);
+        -webkit-transform: translate(0px,5px);
+        border-bottom: 1px solid;
+    }
+    .action-button:focus {
+        outline: none;
+        border: 0;
+    }
+
+    .pagination {
+        text-align: center;
+        padding-top: 30px;
+        font-size: 1.5rem;
+
+        .hidden {
+            opacity: 0.2;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        #currentPage {
+            color: #ffce54;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+    }
+}
+
+.footerAdmin {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}

@@ -1,0 +1,132 @@
+<%- include("header.ejs") %>
+
+<body>
+    <div class="usersTable">
+        <h1>USERS</h1>
+
+        <table class="userTable">
+            <tr>
+                <th>Namn<a href="?firstname=1"><i class="fas fa-caret-up fa-2x"></i></a> <a href="?firstname=-1"><i class="fas fa-caret-down fa-2x"></i></a></th>
+                <th class="rowUser">Email</th>
+                <th class="rowUser">Ändra</th>
+            </tr>
+
+            <% findUsers.forEach( (user) => { %>
+
+            <tr>
+                <td><%= user.firstname %></td>
+                <td class="textTransformInitial"><%= user.email %></td>
+                <td><a href="/updateUser/<%=user._id%>"><i class="far fa-file-alt fa-lg"></i></a></td>
+            </tr>
+
+            <% }); %>
+        </table>
+    </div>
+
+    <div class="pagination">
+
+        <!-- Show go to first page if not next or second to last else half opacity-->
+        <% if (page > 2) { %>
+        <a href=<%= "?page=1" %>> <i class="fas fa-angle-double-left fa-lg"></i> </a>
+        <% } else { %>
+        <i class="fas fa-angle-double-left fa-lg hidden"></i>
+        <% } %>
+
+        <!-- Full opacity when earlier page exists else half opacity -->
+        <% if (page > 1) { %>
+        <a href=<%= "?page=" + (page - 1) %>> <i class="fas fa-chevron-left fa-lg"></i> </a>
+        <% } else { %>
+        <i class="fas fa-chevron-left fa-lg hidden"></i>
+        <% } %>
+
+        <!-- Shows all existing pages with CSS on active page -->
+        <% for (let i = 1; i <= pageCount && pageCount > 1; i++) { %>
+        <% if ( page == i ){ %>
+        <a id="currentPage" href="?page=<%= i %>"> <%= i %></a>
+        <% } else {%>
+        <a href="?page=<%= i %>"> <%= i %></a>
+        <% } %>
+        <% } %>
+
+        <!-- Full opacity if next page exists else half opacity -->
+        <% if (page != pageQuantity) { %>
+        <a href=<%= "?page=" + (page + 1) %>> <i class="fas fa-chevron-right fa-lg"></i> </a>
+        <% } else { %>
+        <i class="fas fa-chevron-right fa-lg hidden"></i>
+        <% } %>
+
+        <!-- Show go to end page if not next or second to last else half opacity -->
+        <% if (page != pageQuantity && page != pageQuantity - 1) { %>
+        <a href=<%= "?page=" + (pageQuantity) %>> <i class="fas fa-angle-double-right fa-lg"></i> </a>
+        <% } else { %>
+        <i class="fas fa-angle-double-right fa-lg hidden"></i>
+        <% } %>
+
+    </div>
+
+
+    <div class="adminsTable">
+        <h1>ADMINS</h1>
+        
+        <table>
+            <tr>
+                <th>Namn<a href="?admin=1"><i class="fas fa-caret-up fa-2x"></i></a> <a href="?admin=-1"><i class="fas fa-caret-down fa-2x"></i></a></th>
+                <th class="rowUser">Email</th>
+                <th class="rowUser">Ändra</th>
+            </tr>
+
+            <% findAdmins.forEach( (user) => { %>
+
+            <tr>
+                <td><%= user.firstname %></td>
+                <td class="textTransformInitial"><%= user.email %></td>
+                <td><a href="/updateUser/<%=user._id%>"><i class="far fa-file-alt fa-lg"></i></a></td>
+            </tr>
+
+            <% }); %>
+        </table>
+    </div>
+
+    <div class="pagination">
+
+        <!-- Show go to first page if not next or second to last else half opacity-->
+        <% if (page > 2) { %>
+        <a href=<%= "?page=1" %>> <i class="fas fa-angle-double-left fa-lg"></i> </a>
+        <% } else { %>
+        <i class="fas fa-angle-double-left fa-lg hidden"></i>
+        <% } %>
+
+        <!-- Full opacity when earlier page exists else half opacity -->
+        <% if (page > 1) { %>
+        <a href=<%= "?page=" + (page - 1) %>> <i class="fas fa-chevron-left fa-lg"></i> </a>
+        <% } else { %>
+        <i class="fas fa-chevron-left fa-lg hidden"></i>
+        <% } %>
+
+        <!-- Shows all existing pages with CSS on active page -->
+        <% for (let i = 1; i <= pageCount && pageCount > 1; i++) { %>
+        <% if ( page == i ){ %>
+        <a id="currentPage" href="?page=<%= i %>"> <%= i %></a>
+        <% } else {%>
+        <a href="?page=<%= i %>"> <%= i %></a>
+        <% } %>
+        <% } %>
+
+        <!-- Full opacity if next page exists else half opacity -->
+        <% if (page != pageQuantity) { %>
+        <a href=<%= "?page=" + (page + 1) %>> <i class="fas fa-chevron-right fa-lg"></i> </a>
+        <% } else { %>
+        <i class="fas fa-chevron-right fa-lg hidden"></i>
+        <% } %>
+
+        <!-- Show go to end page if not next or second to last else half opacity -->
+        <% if (page != pageQuantity && page != pageQuantity - 1) { %>
+        <a href=<%= "?page=" + (pageQuantity) %>> <i class="fas fa-angle-double-right fa-lg"></i> </a>
+        <% } else { %>
+        <i class="fas fa-angle-double-right fa-lg hidden"></i>
+        <% } %>
+
+    </div>
+
+    <%- include("footer.ejs") %>
+</body>

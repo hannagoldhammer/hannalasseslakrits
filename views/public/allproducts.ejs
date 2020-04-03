@@ -1,0 +1,31 @@
+<% if(token) { %> <%- include("userprofile/headermember.ejs") %> <% } 
+ else { %> <%- include("header.ejs") %> <% } %> 
+
+<div class="container" id="all-products-container">
+    <div class="row">
+        <% sixProducts.forEach( item => { %>
+        <div class="product-container col-md-4 col-sm-6 img-fluid">
+            <a href="/allproducts/<%= item.name %>">
+                <img src="<%= item.img %>" alt="Bild på lakrits" class="hover">
+                <br>
+            </a>
+            <a href="/allproducts/<%= item.name %>"><%= item.name %></a>
+            <p><%= item.price %> SEK</p>
+            <a href="/checkout/<%=item._id %>"><button type="button" class="btn btn-outline-dark">Lägg i varukorg</button></a>
+        </div>
+        <% }); %>
+    </div>
+</div>
+<div id="pagination">
+    <% for (let page = 1; page <= pageCount; page++ ) { %>
+    <% if (currentPage == page) { %>
+    <a href="/allproducts/?page=<%= page %>" class="current"><%= page %></a>
+    <% } else { %>
+    <a href="/allproducts/?page=<%= page %>"><%= page %></a>
+    <% } %>
+    <% } %>
+</div>
+<br>
+</body>
+
+<%- include("footer.ejs") %>

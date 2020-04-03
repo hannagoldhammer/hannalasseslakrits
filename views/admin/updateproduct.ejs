@@ -1,0 +1,48 @@
+<%- include("header.ejs") %>
+
+<body>
+    <div>
+        <table class="productList">
+            <tr>
+                <th class="rowName rowNameTable">Namn</th>
+                <th class="rowPrice">Pris</th>
+                <th class="rowDescription">Beskrivning</th>
+                <th class="rowCategory">Kategori</th>
+                <th class="rowImg2">Bild</th>
+                <th class="rowColor">Färg</th>
+            </tr>
+        </table>
+
+        <form method="POST">
+            <table>
+                <tr id="addProduct">
+                    <th class="rowName"><input type="text" name="name" value="<%=updateCandy.name%>" class="inputAdd" required></th>
+                    <th class="rowPrice"><input type="text" name="price" value="<%=updateCandy.price%>" class="inputAdd" id="price" required></th>
+                    <th class="rowDescription"><textarea name="description" class="inputDescription" required><%=updateCandy.description%></textarea></th>
+                    <th class="rowCategory">
+                        <input type="radio" name="category" value="lakrits" id="lakrits"><label for="lakrits"> Lakrits</label>
+                        <input type="radio" name="category" value="chokladlakrits" id="chokladlakrits"><label for="chokladlakrits"> Chokladlakrits</label>
+                    </th>
+                    <th style="display: none;"><input type="text" name="createdByAdmin" value="<%=updateCandy.createdByAdmin%>"></th>
+                    <th class="rowImg2"><input type="text" name="img" value="<%=updateCandy.img%>" class="inputAdd" required></th>
+                    <th class="rowColor"><input type="color" name="color" value="<%=updateCandy.color%>" class="inputAdd"></th>
+                </tr>
+            </table>
+
+            <button type="submit" class="btn action-button shadow animate green">Ändra produkt</button>
+        </form>
+    </div>
+
+    <% if(updateCandy.category === "lakrits"){ %>
+    <script>
+        document.getElementById("lakrits").checked = true;
+    </script>
+    <% } %>
+
+    <% if(updateCandy.category === "chokladlakrits"){ %>
+    <script>
+        document.getElementById("chokladlakrits").checked = true;
+    </script>
+    <% } %>
+
+</body>

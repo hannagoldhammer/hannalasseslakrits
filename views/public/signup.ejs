@@ -1,0 +1,18 @@
+<%- include("header.ejs") %>
+<h2 class="mb-4 mt-3 d-flex justify-content-center">Registera dig hos Lasses Lakrits</h2>
+<div style="text-align: center;" class="container" id="signup-container">
+    <div class="row">
+        <div class="col-12">
+            <form action="/signup" method="post">
+                <div class="form-group">
+                    <input class="mb-3 form-control" type="email" name="email" id="" placeholder="E-postadress">
+                    <input class="mb-3 form-control" type="text" name="firstname" id="" placeholder="Namn">
+                    <input class="mb-3 form-control" type="password" name="password" id="" placeholder="Lösenord">
+                    <input class="mb-3 form-control" type="password" name="" id="" placeholder="Upprepa lösenord">
+                </div>
+                <button class="mb-3 btn btn-outline-dark" type="submit">Registrera</button>
+            </form>
+            <p>Har du redan ett konto? Logga in <a href="/login">här</a></p>
+        </div>
+    </div>
+</div>

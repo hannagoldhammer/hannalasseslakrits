@@ -1,0 +1,26 @@
+nav {
+    background-color: #1c1c1c;
+    #brand {
+        font-family: 'Century Gothic' ;
+        color: white;
+    }
+    #navbarNav {
+        margin-top: 12px;
+        position: relative;
+        justify-content: space-evenly; 
+        ul {
+            list-style-type: none;
+        }
+        a {
+            text-decoration: none;
+            color: rgb(216, 216, 129);
+            font-size: 16px;
+        }
+        .nav-item {
+            margin-left: 150px;
+            text-decoration: none;
+            font-family: 'Century Gothic';
+            color: rgb(216, 216, 129);
+        }
+    }
+}

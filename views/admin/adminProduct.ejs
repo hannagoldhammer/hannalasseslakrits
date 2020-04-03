@@ -1,0 +1,99 @@
+<%- include("header.ejs") %>
+
+<body>
+    <div>
+        <form method="POST">
+            <table>
+                <tr id="addProduct">
+                    <th class="rowName"><input type="text" name="name" placeholder="Namn" class="inputAdd" required></th>
+                    <th class="rowPrice"><input type="text" name="price" placeholder="Pris" class="inputAdd" required></th>
+                    <th class="rowDescription"><textarea name="description" placeholder="Beskrivning" class="inputDescription" required></textarea></th>
+                    <th class="rowCategoryRadio">
+                        <input type="radio" name="category" value="lakrits"><label for="lakrits"> Lakrits</label>
+                        <input type="radio" name="category" value="chokladlakrits"><label for="chokladlakrits"> Chokladlakrits</label>
+                    </th>
+                    <th style="display: none;"><input type="text" name="createdByAdmin" value="<%= user.firstname %>"></th>
+                    <th class="rowImg2"><input type="text" name="img" placeholder="BildURL" class="inputAdd" required></th>
+                    <th class="rowColor"><input type="color" name="color" value="#ffce54" class="inputAdd"></th>
+                    <th style="display: none;"><input type="text" id="hidden" name="user" value="<%= user._id %>"></th>
+                </tr>
+            </table>
+
+            <button type="submit" class="btn action-button shadow animate green">Lägg till produkt</button>
+        </form>
+    </div>
+
+
+    <div>
+        <table class="productList">
+            <tr>
+                <th class="rowName rowNameTable">Namn<a href="?firstname=1"><i class="fas fa-caret-up fa-2x"></i></a> <a href="?firstname=-1"><i class="fas fa-caret-down fa-2x"></i></a></th>
+                <th class="rowPrice">Pris<a href="?price=1"></a> <a href="?price=-1"></a></th>
+                <th class="rowDescription">Beskrivning</th>
+                <th class="rowCategory">Kategori<a href="?category=1"></a> <a href="?category=-1"></a></th>
+                <th class="rowCreatedBy textTransformInitial">Skapad av<a href="?createdBy=1"></a> <a href="?createdBy=-1"></a></th>
+                <th class="rowImg">Bild</th>
+                <th class="rowChange">Ändra</th>
+                <th class="rowDelete textTransformInitial">Ta bort</th>
+            </tr>
+
+            <% findCandy.forEach( (candy) => { %>
+
+            <tr class="productRow">
+                <td><%= candy.name %></td>
+                <td class="textTransformInitial"><%= candy.price %> kr</td>
+                <td class="textTransformInitial"><%= candy.description %></td>
+                <td><%= candy.category %></td>
+                <td><%= candy.createdByAdmin %></td>
+                <td class="fontAwesomeIcon"><a href="<%=candy.img%>" target="_blank"><i class="far fa-image fa-lg"></i></a></td>
+                <td class="fontAwesomeIcon"><a href="/update/<%=candy._id%>"><i class="far fa-file-alt fa-lg"></i></a></td>
+                <td class="fontAwesomeIcon"><a href="/delete/<%=candy._id%>"><i class="far fa-trash-alt fa-lg"></i></a></td>
+            </tr>
+
+            <% }); %>
+
+        </table>
+    </div>
+
+    <div class="pagination">
+
+        <!-- Show go to first page if not next or second to last else half opacity-->
+        <% if (page > 2) { %>
+        <a href=<%= "?page=1" %>> <i class="fas fa-angle-double-left fa-lg"></i> </a>
+        <% } else { %>
+        <i class="fas fa-angle-double-left fa-lg hidden"></i>
+        <% } %>
+
+        <!-- Full opacity when earlier page exists else half opacity -->
+        <% if (page > 1) { %>
+        <a href=<%= "?page=" + (page - 1) %>> <i class="fas fa-chevron-left fa-lg"></i> </a>
+        <% } else { %>
+        <i class="fas fa-chevron-left fa-lg hidden"></i>
+        <% } %>
+
+        <!-- Shows all existing pages with CSS on active page -->
+        <% for (let i = 1; i <= pageCount && pageCount > 1; i++) { %>
+        <% if ( page == i ){ %>
+        <a id="currentPage" href="?page=<%= i %>"> <%= i %></a>
+        <% } else {%>
+        <a href="?page=<%= i %>"> <%= i %></a>
+        <% } %>
+        <% } %>
+
+        <!-- Full opacity if next page exists else half opacity -->
+        <% if (page != pageQuantity) { %>
+        <a href=<%= "?page=" + (page + 1) %>> <i class="fas fa-chevron-right fa-lg"></i> </a>
+        <% } else { %>
+        <i class="fas fa-chevron-right fa-lg hidden"></i>
+        <% } %>
+
+        <!-- Show go to end page if not next or second to last else half opacity -->
+        <% if (page != pageQuantity && page != pageQuantity - 1) { %>
+        <a href=<%= "?page=" + (pageQuantity) %>> <i class="fas fa-angle-double-right fa-lg"></i> </a>
+        <% } else { %>
+        <i class="fas fa-angle-double-right fa-lg hidden"></i>
+        <% } %>
+
+    </div>
+    <%- include("footer.ejs") %>
+</body>

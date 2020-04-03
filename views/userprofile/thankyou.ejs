@@ -1,0 +1,31 @@
+<% if(token) { %> <%- include("headermember.ejs") %> <% } 
+ else { %> <%- include("header.ejs") %> <% } %>
+ 
+<body>
+    <div class="container">
+        <div class="justify-content-center py-3"></div>
+        <div class="justify-content-center text-center pt-5">
+            <h3>Tack <%=user.firstname%> för din order!</h3>
+            <div class="pt-4">
+                <p>Vi har bekräftat din order enligt nedan.</p>
+                <p>Din order kommer att vara hos dig om 3-5 arbetsdagar.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container thecontainer">
+        <div class="row justify-content-center">
+            <div class="text-center">
+                <ul class="wishlist ">
+                    <% products.forEach(candy=>{ %>
+                    <li class="wishlistItem">
+                        <a href="/allproducts/<%=candy.name %>"><p><%= candy.name %></p></a>
+                        <div>
+                            <a href="/allproducts/<%=candy.name %>"><img src="<%= candy.img %>" alt="Bild på lakrits" class="hover wishlistImg"></a>
+                        </div>
+                        <p class="qty btn"><%= candy.quantity %></p>
+                    </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+</body>

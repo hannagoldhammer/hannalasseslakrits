@@ -1,0 +1,91 @@
+Product 1: 
+name: Twisted Banana
+img: twisted_banana_png, twisted banana_2.jpg
+category: chocolate
+description: Chocolate covered liquorice
+ Gå bananas över denna kombination av banan, salt lakrits, vitchoklad och rålakritspulver.
+
+Vi har tagit den välkända smaken av banan och satt en unik dansk prägel på den. Det var enkelt att hitta en partner till vår salta lakrits, vi upptäckte att den fantastiska cavendish-bananen var den perfekta matchen med vår klassiska nr. 2. Kom ihåg att det är okej att gå bananas, så länge man inte glömmer sina rötter.
+
+Upplev hur en enkel bit vill få dig till att dagdrömma om tropiskt klimat med palmer och vita sandstränder.
+
+vikt: 295 g pris: 145 kr
+
+Product 2: 
+name: Salty Liquorice
+img: salty_liqourice.png
+category: liquorice
+description: Saltlakrits
+När ögonen sluter sig efter en tugga av den starka, salta lakritsen med salmiak, exploderar smaken av rå, nordisk styrka. Som av hav, tjära, rök från ett bål och doft av harts. Detta är den absoluta favoriten i de nordiska länderna.
+vikt: 360 g pris: 135 kr
+
+Product 3: 
+name: Coffee Kieni
+img: coffe_chocolate.png, coffe_chocolate_2.png
+category: chocolate
+description: För en livsnjutare är ett gott kaffe ofta en del av vardagen. Lakrids C är en söt lakrits dragérad i len mjölkchoklad och Coffee Collectives kaffebönor från det lilla samhället "Kieni", mitt i hjärtat av Kenya. Rostningen är noga utvald för Lakrids C, på grund av sina sina fruktiga och blommiga toner. För att garantera den unika produktkvaliteten, levereras kaffet färskrostat till vår fabrik, precis innan vi producerar – en extraordinär kaffeupplevelse för verkliga connoisseurer.
+vikt: 295 g pris: 135 kr
+
+Product 4
+name: Passion Fruit
+img: passion_fruit.png , passion_fruit_2.png
+category: chocolate
+description: Söt lakrits i noga utvald vit choklad och förförande passionsfrukt. Chokladens sötma, passionsfruktens syra och lakritsens förmåga att förena smakupplevelserna skapar den perfekta munsbiten. Sött, syrligt och suveränt – inbäddat i ett delikat, sprött skal av socker.
+vikt: 295g pris: 135 kr
+
+Product 5
+name: Habanero Liquorice
+img: habanero_liquorice.png
+category: liquorice
+description: Lakrits tillsammans med färsk chili är ett bra exempel på hur två naturkrafter kan förenas och skapa en helt ny kraft. No.4 är en söt lakrits med habanero – förbered dig på en het, men harmonisk smakupplevelse.
+vikt:360 g pris: 125 kr
+
+Product 6
+name: Sweet Liquorice
+img: sweet_liquorice.png
+category: liquorice
+description: Vår söta lakrits är lakrits i sin renaste form, där den naturliga sötman kommer från lakritsroten. Söt, men i balans med sin egen styrka – tillsammans med en extra finess i form av tillsatt naturlig anis. Den är älskad överhela världen, och för många är No. 1 den enda.
+vikt: 360g  pris: 125 kr
+
+Product 7
+name: The Original
+img: original_chocolate.png , original_chocolate_2.png
+category: chocolate
+description: Lakrids A var den allra första produkten som Johan Bülow skapade, efter att ha fått idén att täcka lakrits med choklad. Trots ett visst motstånd såg den populära produkten Lakrids A snart dagens ljus. Kombinationen av söt lakrits, noga utvald högkvalitativ mjölkchoklad och fint lakritspulver är enligt de flesta otroligt beroendeframkallande.
+vikt: 295 kr pris: 135 kr
+
+Product 8
+name: Crispy Caramel
+img:crispy_caramel.png
+category: chocolate
+description: 
+Vårt krispiga, silvermarmorerade ägg består av mjuk lakrits och karamelliserad dulchechoklad, som tillsammans ger en utsökt och intensiv smak. Små flingor av havssalt och rått lakritspulver bildar en raffinerad motkraft åt den djupa sötman och skapar en riktigt härlig balans. En prisbelönt klassiker.
+vikt: 295 g pris: 145 kr
+
+Product 9
+name: Salmiak
+img: salmiak_chocolate.png , salmiak_chocolate_2.png
+category: chocolate
+description: En lockande kombination av vit choklad med en kärna av salt lakrits. Medan den krämiga vita chokladen smälter på tungan, avslöjas små smakexplosioner av lakritspulver som fulländar den perfekta balansen mellan salt och sött.
+vikt: 295g pris: 135 kr
+
+Product 10
+name: Red liquorice
+img: red_liquorice.png
+category: liquorice
+description: Det har tagit oss över 5 år att skapa Johan Bülows variant av en amerikansk lakrits – nämligen röd lakrits Mjuk, men med tuggmotstånd och fylld med koncentrerad fruktsaft från svarta vinbär, tranbär och jordgubbar kombinerad med lakrits.
+vikt: 360 g pris: 125 kr
+
+Product 11
+name: Strawberries & Cream
+img: strawberry_cream.png
+category: chocolate
+description: Kärleken har många dimensioner. Det är ett sinnestillstånd, en känsla och en smak. Vår ljuvliga kärleksdimension är en synergi mellan syrlighet, jordgubbar, vit mjuk gräddighet och vår egen söta lakrits. Den exklusiva vita chokladen binder samman alla aromer och den härligt fräscha kombinationen låter dig smaka äkta dansk kärlek.
+vikt: 295g pris: 145 kr
+
+Product 12
+name: Salt & Caramel
+img: salt_caramel.png , salt_caramel_2.png
+category: chocolate
+description: Vi varnar för att lakrits tillsammans med karamell och havssalt är en oemotståndlig smakupplevelse. Vi har dragerat en kärna av söt lakrits med karamelliserad dulchechoklad och smaksatt med krispiga flingor av havssalt. Man kan inte nöjas med bara en Lakrids D – det går helt enkelt inte.
+vikt: 295g pris: 135 kr

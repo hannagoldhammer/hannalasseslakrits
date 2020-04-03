@@ -1,0 +1,158 @@
+* {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; }
+
+body {
+  text-transform: capitalize;
+  text-align: center; }
+  body h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid black;
+    display: inline;
+    border-spacing: 2px; }
+  body .usersTable {
+    padding-top: 5px; }
+  body .adminsTable {
+    padding-top: 30px; }
+  body .textTransformInitial {
+    text-transform: initial; }
+  body table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap; }
+    body table a {
+      color: #000; }
+    body table input, body table textarea {
+      font-size: inherit; }
+    body table textarea {
+      padding-top: 47px; }
+    body table input::placeholder, body table textarea::placeholder {
+      color: #000; }
+    body table label {
+      font-weight: normal; }
+    body table .fontAwesomeIcon {
+      text-align: center; }
+    body table td {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    body table td, body table th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px; }
+    body table #addProduct {
+      height: 100px; }
+    body table .inputAdd {
+      display: block;
+      width: 100%;
+      height: 60px;
+      border: 0; }
+    body table .inputDescription {
+      width: 100%;
+      min-height: 60px;
+      border: 0;
+      resize: vertical; }
+    body table .inputAdd:focus, body table .inputDescription:focus {
+      outline: none; }
+    body table .tdAdd {
+      margin: 0;
+      padding: 0; }
+    body table tr:nth-child(even) {
+      background-color: #dddddd; }
+    body table .productRow:hover {
+      background-color: #ffce54; }
+    body table .fa-caret-up {
+      color: #ffce54;
+      margin-left: 5px; }
+    body table .fa-caret-down {
+      color: #ffce54;
+      margin-left: 2px; }
+    body table .rowName {
+      width: 20%; }
+    body table .rowNameTable {
+      padding-top: 0;
+      margin-top: 0; }
+    body table .rowPrice {
+      width: 7%; }
+    body table .rowDescription {
+      width: 32%; }
+    body table .rowCategoryRadio {
+      width: 12.5%;
+      text-align: center; }
+      body table .rowCategoryRadio input[type=radio] {
+        display: grid;
+        width: 100%;
+        margin: 10px 0px 5px 0px; }
+    body table .rowCategory {
+      width: 12.5%; }
+    body table .rowColor {
+      width: 4.5%; }
+    body table .rowCreatedBy {
+      width: 8%; }
+    body table .rowImg, body table .rowChange, body table .rowDelete {
+      width: 5%; }
+    body table .rowImg2 {
+      width: 18.5%; }
+    body table .rowUser {
+      padding-top: 21px; }
+  body form {
+    text-align: center; }
+  body .animate {
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s; }
+  body .green {
+    background-color: #42ac6e;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 5px solid #76d49e;
+    text-shadow: 0px -2px #27ae60; }
+  body .grey {
+    background-color: #a3b3aa;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 5px solid #c4d4cb;
+    text-shadow: 0px -2px #acb8b1; }
+  body .yellow {
+    background-color: #b6b463;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 5px solid #cfd87a;
+    text-shadow: 0px -2px #b2be6b; }
+  body .action-button {
+    padding: 10px 40px;
+    margin: 20px 0px;
+    font-size: 18px;
+    color: #FFF;
+    text-decoration: none; }
+  body .action-button:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    border-bottom: 1px solid; }
+  body .action-button:focus {
+    outline: none;
+    border: 0; }
+  body .pagination {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 1.5rem; }
+    body .pagination .hidden {
+      opacity: 0.2; }
+    body .pagination a {
+      color: #000;
+      text-decoration: none; }
+    body .pagination #currentPage {
+      color: #ffce54;
+      font-weight: bold;
+      font-size: 2rem; }
+
+.footerAdmin {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  text-align: center; }

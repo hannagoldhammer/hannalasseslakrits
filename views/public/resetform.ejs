@@ -1,0 +1,12 @@
+<%- include("header.ejs") %>
+
+<div class="container">
+    <form action="/reset/:token" method="post">
+        <input type="hidden" value="<%=user._id%>" name="userId">
+        <input type="password" class="mb-3 form-control" name="password" id="" placeholder="Nytt lösenord">
+        <input type="password" class="mb-3 form-control" id="" placeholder="Repetera lösenord">
+        <button type="submit" class="btn btn-outline-dark">Spara nytt lösenord</button>
+    </form>
+</div>
+
+<%- include("footer.ejs") %>

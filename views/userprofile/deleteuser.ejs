@@ -1,0 +1,23 @@
+<%- include("headermember.ejs") %>
+<div class="container thecontainer">
+    <div class="row justify-content-center py-3">
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-9 text-center">
+            <h5>Avsluta medlemskap</h5>
+            <p>Här tar du bort din användare från Lasses Lakrits. Det går inte att ångra.</p>
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-6 text-center">
+                    <a href="/deleteuser/:id<%=""%>">
+                        <button type="submit" class="btn btn-dark w-100" id="delete-btn">Ta bort användare</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-3 pl-4 pt-2 border-left border-right sidebar-mypage">
+            <h6><a href="/mypage">Mina uppgifter</a></h6>
+            <h6><a href="/wishlist">Min önskelista</a></h6>
+            <h6><a href="/deleteuser">Avsluta medlemskap</a></h6>
+            <h6><%- include("logout.ejs") %></h6>
+        </div>
+    </div>
+</div>

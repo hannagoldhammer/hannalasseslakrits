@@ -1,0 +1,314 @@
+#header {
+  z-index: 1;
+  background-color: #1c1c1c;
+  text-align: center;
+  background-image: url("#"); }
+  #header #headerTitle {
+    font-family: "Century Gothic";
+    font-size: 40px;
+    margin-left: 10px;
+    color: white; }
+  #header #slogan {
+    color: #d8d881;
+    margin-bottom: 0%; }
+
+.navbar a {
+  color: #d8d881 !important; }
+
+.navbar .navbar-toggler {
+  border-color: white; }
+
+.navbar .iconBar {
+  color: white !important; }
+
+@media (min-width: 992px) {
+  .navbar .navbar-nav {
+    margin: auto; }
+    .navbar .navbar-nav li {
+      margin-left: 70px;
+      margin-right: 70px; } }
+
+#pagination {
+  padding: 25px; }
+
+nav {
+  background-color: #1c1c1c; }
+  nav #brand {
+    font-family: 'Century Gothic';
+    color: white; }
+  nav #navbarNav {
+    margin-top: 12px;
+    position: relative;
+    justify-content: space-evenly; }
+    nav #navbarNav ul {
+      list-style-type: none; }
+    nav #navbarNav a {
+      text-decoration: none;
+      color: #d8d881;
+      font-size: 16px; }
+    nav #navbarNav .nav-item {
+      margin-left: 150px;
+      text-decoration: none;
+      font-family: 'Century Gothic';
+      color: #d8d881; }
+
+#all-products-container .row {
+  display: flex;
+  justify-content: center; }
+
+#all-products-container .product-container {
+  text-align: center;
+  padding-top: 40px; }
+  #all-products-container .product-container a {
+    text-decoration: none;
+    color: black; }
+  #all-products-container .product-container a:hover {
+    font-weight: bold; }
+  #all-products-container .product-container img {
+    max-width: 200px;
+    padding-bottom: 20px; }
+
+#pagination {
+  text-align: center;
+  font-size: 2.2rem; }
+  #pagination a {
+    color: black; }
+  #pagination .current {
+    text-decoration: underline; }
+
+#one-product-container {
+  background-image: url("/images/LakritdBG.png");
+  background-repeat: repeat;
+  background-size: 50%;
+  padding: 0px;
+  animation: animation 200s linear infinite; }
+
+@keyframes animation {
+  100% {
+    background-position: -0px -3000px; } }
+  #one-product-container .oneProductHeader {
+    width: 100%;
+    position: absolute;
+    max-height: 250px; }
+  #one-product-container .lakritsMainDiv {
+    padding-top: 30px;
+    justify-content: center;
+    padding-bottom: 30px;
+    margin: 0px; }
+    #one-product-container .lakritsMainDiv .lakritsImg {
+      height: 400px;
+      z-index: 1; }
+    #one-product-container .lakritsMainDiv .backgroundLakrits .miniLakrits {
+      width: 20px;
+      padding: 50px; }
+  #one-product-container .oneProductInfo {
+    padding-bottom: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #ececec;
+    padding-top: 20px;
+    color: black;
+    opacity: 0.9;
+    border-top: solid 2px silver;
+    box-shadow: 0px 0px 20px grey;
+    padding-left: 15px;
+    padding-right: 10px; }
+    @media (min-width: 820px) {
+      #one-product-container .oneProductInfo {
+        padding-left: 30px; } }
+    @media (min-width: 1200px) {
+      #one-product-container .oneProductInfo {
+        padding-left: 60px; } }
+    #one-product-container .oneProductInfo .oneProductBtn {
+      padding-top: 15px;
+      padding-bottom: 20px;
+      padding-left: 14px; }
+      #one-product-container .oneProductInfo .oneProductBtn .iconDiv .far {
+        pointer-events: auto;
+        padding-left: 8px;
+        margin: 5px; }
+    #one-product-container .oneProductInfo .oneProductDescription {
+      text-align: left;
+      z-index: 1; }
+      @media (min-width: 992px) {
+        #one-product-container .oneProductInfo .oneProductDescription {
+          flex-direction: column; } }
+
+body, html {
+  height: 100%; }
+  body .parallax, html .parallax {
+    background-image: url("/images/background.jpg");
+    height: 70%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  body #carousel, html #carousel {
+    width: 80%;
+    padding-top: 30px; }
+    body #carousel .carousel-inner, html #carousel .carousel-inner {
+      width: 100%; }
+    body #carousel .carousel-control-prev,
+    body #carousel .carousel-control-next, html #carousel .carousel-control-prev,
+    html #carousel .carousel-control-next {
+      filter: invert(1); }
+    body #carousel .carousel-item, html #carousel .carousel-item {
+      height: 100%;
+      width: 100%; }
+      body #carousel .carousel-item img, html #carousel .carousel-item img {
+        max-width: 175px;
+        min-width: 175px;
+        margin: auto;
+        height: 400px; }
+  body .favProd, html .favProd {
+    max-width: 250px;
+    margin: auto; }
+    body .favProd a, html .favProd a {
+      text-decoration: none; }
+      body .favProd a .h5Titel, html .favProd a .h5Titel {
+        text-align: center;
+        color: #2b2b2b; }
+  body .titel, html .titel {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 30px; }
+  body .hover:hover, html .hover:hover {
+    filter: blur(0.5px);
+    transition: transform .2s;
+    transform: scale(1.1); }
+  body .historyDiv, html .historyDiv {
+    margin: 30px; }
+
+html body {
+  min-height: 100%; }
+
+.footer-container {
+  display: flex;
+  flex-direction: column; }
+
+.thecontainer {
+  flex: 1; }
+
+.footer {
+  background-color: #1c1c1c;
+  flex-shrink: 0; }
+  .footer ul, .footer .footer-title {
+    color: white; }
+
+#login-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30%;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+#signup-container {
+  margin-top: 20px;
+  margin-bottom: 25%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center; }
+
+#resetform {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40%;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.sidebar-mypage {
+  margin-top: 25px; }
+  .sidebar-mypage a, .sidebar-mypage a:link, .sidebar-mypage a:visited {
+    color: black;
+    text-decoration: none;
+    font-weight: lighter; }
+  .sidebar-mypage a:hover {
+    color: black;
+    font-weight: bold; }
+  .sidebar-mypage a:active, .sidebar-mypage a:focus {
+    color: black;
+    font-weight: bold; }
+
+.wishlist {
+  margin-top: 25px;
+  list-style-type: none;
+  padding: 0; }
+  .wishlist a {
+    color: black;
+    text-decoration: underline;
+    text-underline-position: under; }
+
+.wishlistItem {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  text-align: center;
+  display: inline-block; }
+
+#myform {
+  text-align: center;
+  padding: 5px; }
+
+.qty {
+  width: 50px;
+  text-align: center;
+  font-size: 1.3rem; }
+
+.qtyplus, .qtyminus {
+  width: 28%;
+  font-weight: bold; }
+
+@media (min-width: 992px) {
+  .totalsummor {
+    width: 44%; } }
+
+.totalsummor .total {
+  font-weight: 500; }
+
+.totalsummor .totalInklMoms {
+  font-size: 1.2rem;
+  font-weight: bold; }
+
+.wishlisten {
+  margin-bottom: 10px; }
+
+.wishlistButton {
+  margin-bottom: 30px; }
+
+h6 {
+  font-weight: bold;
+  color: black; }
+
+.wishlistImg {
+  height: 100px; }
+
+h3 {
+  color: #4c4c4c; }
+
+.orderForm .container {
+  color: #4c4c4c;
+  padding: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); }
+  .orderForm .container .order-form-label {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    font-weight: bold; }
+  .orderForm .container .order-form-input {
+    width: 100%;
+    padding: 8px 8px;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-radius: 3px !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.2em;
+    background-color: transparent;
+    border-color: #cccccc; }
+  .orderForm .container .fa-cc-mastercard, .orderForm .container .fa-cc-visa {
+    font-size: 30px;
+    margin-top: 10px; }

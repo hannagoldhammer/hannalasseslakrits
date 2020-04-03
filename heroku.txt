@@ -1,0 +1,32 @@
+intallera 
+npm i -g heroku
+
+heroku login 
+- Tryck på valfri knapp på tagnentbordet för att komma till Heorukus hemsida för att logga in  
+
+Ladda ner:
+npm i --save dotenv
+
+lägg till en .env fil och fixa config-filen
+
+Skapa en Procfile i root och skriv:
+"Web: node index.js"
+detta är för att Heroku ska veta vilken entry point som vår app har 
+
+heroku create oishfoihsf (namnet på mitt projekt i heroku)
+
+i .gitignore behöver inte config vara med utan ersätt den med .env
+
+ändra i script tagen till node ist är nodemon.
+
+Lägg till DATABASE och MAIL i Herokus Config Vars.
+
+git add + commmit 
+git push heroku oshfohnf (grenen eller master)
+
+
+BETALNINGSLÖSNING
+
+Använda Stripe api
+- Andra populära tredjepartsbibliotek är paypal och Klarna. 
+

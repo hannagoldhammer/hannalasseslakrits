@@ -1,0 +1,79 @@
+<% if(token) { %>
+<%- include("userprofile/headermember.ejs") %>
+<% } else { %>
+<%- include("header.ejs") %> <% } %>
+
+<div class="parallax"></div>
+<div id="carousel" class="carousel slide mx-auto" data-interval="3500" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/original_chocolate.png" id="firstSlide" class="img-fluid d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="/images/salty_liquorice.png" id="secondSlide" class="img-fluid d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="/images/red_liquorice.png" id="thirdSlide" class="img-fluid d-block w-100">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="titel">
+  <h2>Utvalda favoriter</h2>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 pb-3 d-flex justify-content-center hover favProd">
+      <a href="/allproducts/Crispy%20Caramel">
+        <img src="https://lakridsbybulow.se/media/2247/cc-regular-correct.png?width=350" class="img-fluid">
+        <div class="h5Titel pt-3">
+          <h5>Crispy Caramel</h5>
+        </div>
+      </a>
+    </div>
+    <div class="col-sm-4 pb-3 d-flex justify-content-center hover favProd">
+      <a href="/allproducts/Strawberries%20&%20Cream">
+        <img src="https://lakridsbybulow.se/media/2283/sc_regular.png?width=350" class="img-fluid">
+        <div class="h5Titel pt-3">
+          <h5>Strawberries Cream</h5>
+        </div>
+      </a>
+    </div>
+    <div class="col-sm-4 pb-3 d-flex justify-content-center hover favProd">
+      <a href="/allproducts/Salmiak">
+        <img src="https://lakridsbybulow.se/media/1038/e_salmiak_regular.png?width=350" class="img-fluid">
+        <div class="h5Titel pt-3">
+          <h5>Salmiak</h5>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h2 class="titel d-flex justify-content-center pl-3 pr-3">Kort om lakritsens historia</h2>
+  <div class="historyDiv">
+    <p>Lakritsens historia Lakritsrot har en lång historia framförallt som medicinalväxt och så långt
+      som 4000 år tillbaka i tiden finns skrifter som visade att lakritsrot användes som läkemedel.
+      Härföraren Alexander den store och kejsaren Julius Caesar gav sina soldater lakritsrot att tugga
+      på för att motverka törst. Italien är en stor producent av lakrits och då främst i södra Italien,
+      Kalabrien. Italien anses av många odla världens bästa lakrits. <br>
+      I England kom lakritsodlandet igång under 1500-talet. Det var också här som det mjuka lakritsgodiset
+      uppfanns. Egentligen sägs det varit ett misstag då man råkade röra vetemjöl i tillverkningen av
+      lakritsgodis, vilket senare blev kallat engelsk konfekt. Till Sverige kom lakrits i slutet 1800-talet
+      och har genom åren blivit en mycket populär och efterfrågad produkt.
+    </p>
+  </div>
+</div>
+<%- include("footer.ejs") %>

@@ -1,0 +1,18 @@
+<%- include("header.ejs") %>
+<div class="container" id="login-container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mb-4"> Logga in</h2>
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <input class="mb-3 form-control" type="email" name="email" required="true"
+                        placeholder="E-postadress">
+                    <input class="mb-3 form-control" type="password" name="password" required="true"
+                        placeholder="Lösenord">
+                </div>
+                <button type="submit" class="btn btn-outline-dark">Logga in</button>
+            </form><br>
+            <p>Har du inget konto? Då kan du skapa ett <a href="/signup">här</a></p>
+        </div>
+    </div>
+</div>

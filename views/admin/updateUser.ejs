@@ -1,0 +1,41 @@
+<%- include("header.ejs") %>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <th class="rowName">Namn</th>
+                <th class="rowName">Email</th>
+                <th class="rowCategory">Admin: False / True</th>
+            </tr>
+        </table>
+
+        <form method="POST">
+            <table>
+                <tr id="addProduct">
+                    <th class="rowName"><input type="text" name="firstname" value="<%=findUser.firstname%>" class="inputAdd" required></th>
+                    <th class="rowName"><input type="text" name="email" value="<%=findUser.email%>" class="inputAdd" required></th>
+                    <th class="rowCategory">
+                        <input type="radio" name="admin" value="false" id="false"><label for="false"> False</label>
+                        <input type="radio" name="admin" value="true" id="true"><label for="true"> True</label>
+                    </th>
+                </tr>
+            </table>
+
+            <button type="submit" class="btn action-button shadow animate green">Ändra användare</button>
+        </form>
+    </div>
+
+    <% if(findUser.admin === false){ %>
+    <script>
+        document.getElementById("false").checked = true;
+    </script>
+    <% } %>
+
+    <% if(findUser.admin === true){ %>
+    <script>
+        document.getElementById("true").checked = true;
+    </script>
+    <% } %>
+
+</body>

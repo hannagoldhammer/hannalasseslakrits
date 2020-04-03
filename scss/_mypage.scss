@@ -1,0 +1,86 @@
+@import "mixins.scss";
+
+.sidebar-mypage {
+    margin-top: 25px;
+    a, a:link, a:visited {
+        color: black;
+        text-decoration: none;
+        font-weight: lighter;
+    }
+       
+    a:hover {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+    }
+       
+    a:active , a:focus {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+    }
+    
+}
+
+
+.wishlist {
+    margin-top: 25px;
+    list-style-type: none;
+    padding: 0;
+    a {
+        color: black;
+        text-decoration: underline;
+        text-underline-position: under;
+    }
+}
+
+.wishlistItem {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+#myform {
+    text-align: center;
+    padding: 5px;
+    // margin: 2%;
+}
+.qty {
+    width: 50px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.qtyplus, .qtyminus {
+    width: 28%;
+    font-weight: bold;
+}
+
+.totalsummor {
+    @include mini-desktop{
+        width: 44%;
+    }
+    .total {
+        font-weight: 500;
+    }
+    .totalInklMoms {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+.wishlisten {
+    margin-bottom: 10px;
+}
+
+.wishlistButton {
+    margin-bottom: 30px;
+}
+
+h6 {
+    font-weight: bold;
+    color: black;
+}
+
+.wishlistImg {
+    height: 100px;
+}

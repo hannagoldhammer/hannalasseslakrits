@@ -1,0 +1,20 @@
+ html body{
+    min-height: 100%;
+} 
+.footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.thecontainer {
+    flex: 1;    
+}
+
+.footer {
+    background-color: #1c1c1c;
+    flex-shrink: 0;
+
+    ul , .footer-title {
+        color: white;
+    }
+}

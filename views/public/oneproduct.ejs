@@ -1,0 +1,38 @@
+<% if(token) { %> <%- include("userprofile/headermember.ejs") %> <% } 
+ else { %> <%- include("header.ejs") %> <% } %>
+
+<body>
+    <div class="container-fluid" id="one-product-container">
+        <canvas class="oneProductHeader"
+            style="background-color: <%= item.color %>; background-image: linear-gradient(to top left, <%= item.color %> , white 99%);">
+        </canvas>
+        <div class="row lakritsMainDiv">
+            <img class="lakritsImg" src="<%= item.img %>">
+        </div>
+        <div class="row oneProductInfo m-0">
+            <div class="oneProductTitle col-sm-12 col-md-6 col-lg-6">
+                <h2><%= item.name %></h2> <br>
+                <span><%= item.price %> kr</span>
+                <div class="row oneProductBtn">
+                    <a href="/checkout/<%=item._id %>"><button type="button" class="btn btn-outline-dark">Lägg till</button></a>
+                    <div class="iconDiv">
+                        <a href="/wishlist/<%=item._id %>" class="heart"><i class="far fa-heart fa-2x"
+                                style="color: black;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="oneProductDescription col-sm-12 col-md-6 col-lg-6">
+                <p><%= item.description %></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("a").click(function () {
+                $(".far").css("color", "red");
+            });
+        }); 
+    </script>
+    <%- include("footer.ejs") %>
+</body>

@@ -1,0 +1,80 @@
+@import "mixins.scss";
+
+#one-product-container{
+    background-image: url("/images/LakritdBG.png");
+    background-repeat: repeat;
+    background-size: 50%;
+    padding: 0px;
+     animation: animation 200s linear infinite;
+    
+      @keyframes animation {
+          100%{
+              background-position:-0px -3000px;
+          }
+      } 
+    .oneProductHeader{
+        width: 100%;
+        position: absolute;
+        max-height: 250px;
+    }
+    
+    .lakritsMainDiv{
+        padding-top: 30px;
+        justify-content: center;
+        padding-bottom: 30px;
+        margin: 0px;
+        .lakritsImg{
+            height: 400px;
+            z-index: 1;
+        }
+
+        .backgroundLakrits{
+            .miniLakrits{
+                width: 20px;
+                padding: 50px;
+            } 
+        }
+    }
+    .oneProductInfo{
+        padding-bottom: 30px;
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: #ececec;
+        padding-top: 20px;
+        color: black;
+        opacity: 0.9;
+        border-top: solid 2px silver;
+        box-shadow:  0px 0px 20px grey;
+        padding-left: 15px;
+        padding-right: 10px;
+        @include tablet{
+            padding-left: 30px;
+        }
+        @include desktop{
+            padding-left: 60px;
+
+        }
+
+        .oneProductBtn{
+            padding-top: 15px;
+            padding-bottom: 20px;
+            padding-left: 14px;
+            .iconDiv{
+                .far{
+                    pointer-events: auto;
+                    padding-left: 8px;
+                    margin: 5px;
+                }
+            }
+        }
+
+        .oneProductDescription{
+            text-align: left;
+            z-index: 1;
+            
+            @include mini-desktop {
+                flex-direction: column;
+            }
+        }
+    }  
+}

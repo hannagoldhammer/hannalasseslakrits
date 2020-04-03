@@ -1,0 +1,35 @@
+<% if(token) { %> <%- include("headermember.ejs") %> <% } 
+ else { %> <%- include("header.ejs") %> <% } %>
+
+<div class="container thecontainer">
+    <div class="row justify-content-center py-3"></div>
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-9 text-center">
+            <h5> Min önskelista</h5>
+
+            <% if(user.wishlist < 1){ %>
+            <p>Din önskelista är tom</p>
+            <% } %>
+
+            <ul class="wishlist">
+                <% user.wishlist.forEach( (candy)=>{ %>
+                <li class="wishlisten">
+                    <a href="/allproducts/<%=candy.candyId.name %>"><p><%= candy.candyId.name %></p></a>
+                    <p><%= candy.candyId.price %> kr </p>
+                    <div>
+                        <a href="/allproducts/<%=candy.candyId.name %>"><img src="<%= candy.candyId.img %>" alt="Bild på lakrits" class="hover wishlistImg"></a>
+                    </div>
+                </li>
+                <a href="/deleteWishlist/<%= candy.candyId._id%>"><button style="margin-top: 10px;" type="button"
+                        class="btn btn-outline-dark wishlistButton">Ta bort från listan</button></a>
+                <% } ) %>
+            </ul>
+        </div>
+        <div class="col-sm-12 col-md-3 pl-4 pt-2 border-left border-right sidebar-mypage">
+            <h6><a href="/mypage">Mina uppgifter</a></h6>
+            <h6><a href="/wishlist">Min önskelista</a></h6>
+            <h6><a href="/deleteuser">Avsluta medlemskap</a></h6>
+            <h6><%- include("logout.ejs") %></h6>
+        </div>
+    </div>
+</div>
